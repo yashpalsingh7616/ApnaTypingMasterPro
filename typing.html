@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Live Typing Test - Apna Typing Master Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="testPageWrap">
+    <div class="test-topbar-main">
+        <div class="test-topbar-title" id="testTitle">⌨ Typing Test</div>
+        <div class="test-topbar-right">
+            <button class="test-topbar-btn" onclick="goHome()">Dashboard</button>
+        </div>
+    </div>
+
+    <div class="test-container">
+        <div class="test-main">
+            <div class="test-bar">
+                <select id="ctrlEx" class="ctrl-select" onchange="changeEx()"></select>
+                <select id="ctrlDur" class="ctrl-select" onchange="resetTest()">
+                    <option value="10">10 Min</option><option value="5">5 Min</option><option value="1">1 Min</option>
+                </select>
+                <div class="test-ex-label" id="activeExamDisplay"></div>
+            </div>
+            
+            <div class="passage-display" id="passageDisplay">
+                <span id="passageSpan"></span>
+            </div>
+            
+            <div class="control-bar">
+                <button class="ctrl-start" id="startBtn" onclick="startTest()">▶ START TEST</button>
+                <button class="ctrl-stop" id="stopBtn" onclick="submitTest()" style="display:none;">■ SUBMIT</button>
+                <div class="ctrl-timer" id="ctrlTimer">10:00</div>
+                <div class="ctrl-wpm">WPM: <span id="liveWpm">0</span></div>
+                <div class="ctrl-wpm">Acc: <span id="liveAcc">100%</span></div>
+            </div>
+            
+            <textarea class="type-area" id="typeArea" disabled placeholder="Type here..."></textarea>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
