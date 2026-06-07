@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <title>Candidate Dashboard - Apna Typing Master Pro</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="dashboardPage">
+    <div class="auth-strip" id="authStrip"></div>
+    <div class="topbar">
+        <div class="topbar-title">⌨ Apna Typing Master Pro</div>
+        <div class="topbar-subtitle">India's Best Government Exam Typing Portal</div>
+        <div class="topbar-right">
+            <button class="topbar-btn" onclick="window.location.href='index.html'">Home</button>
+            <button class="topbar-btn live-btn" onclick="openLiveTestPage()">LIVE EXAMS</button>
+        </div>
+    </div>
+    
+    <div class="pro-banner" id="proBanner">
+        <span>Upgrade to Pro to unlock all 500+ passages!</span>
+        <button class="pro-btn" onclick="openDModal('subModal')">Go Pro Now</button>
+    </div>
+
+    <div class="main-wrapper">
+        <div class="left-panel">
+            <div class="section-card">
+                <div class="section-header sh-blue">General Typing Practice</div>
+                <div class="section-body">
+                    <div class="typing-grid">
+                        <div class="typing-item" onclick="tryTest('english')">
+                            <div class="icon-box"><div class="row"><div class="key">A</div><div class="key">B</div></div><div class="row"><div class="key">C</div><div class="key">D</div></div></div>
+                            <div class="typing-label">English (Standard)</div>
+                        </div>
+                        <div class="typing-item" onclick="tryTestHindi('mangal_gail')">
+                            <div class="icon-box"><div class="row"><div class="key h">क</div><div class="key h">ख</div></div><div class="row"><div class="key h">ग</div><div class="key h">घ</div></div></div>
+                            <div class="typing-label">Hindi Mangal (GAIL)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
